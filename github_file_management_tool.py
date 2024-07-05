@@ -33,3 +33,15 @@ def delete_file():
     delete_info = final_repo.get_contents(file_to_delete, ref="test")
 
     final_repo.delete_file(delete_info.path, message, delete_info.sha, branch=branch)
+
+def update_file():
+
+    file_to_update = input("Enter in the file name with extension that you want to update: ")
+
+    c = final_repo.get_contents(file_to_update, ref="test")
+
+    message = input("Enter in commit message: ")
+
+    branch = input("Enter the branch name you want to update this file in: ")
+
+    final_repo.update_file(c.path, message, "test", c.sha, branch=branch)

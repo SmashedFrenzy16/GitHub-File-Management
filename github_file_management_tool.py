@@ -1,5 +1,7 @@
 from github import *
 
+# This script allows you to create, delete, and update files in a GitHub repository using the GitHub API
+
 token = input("Enter in your GitHub access token: ")
 
 a = Auth.Token(token)

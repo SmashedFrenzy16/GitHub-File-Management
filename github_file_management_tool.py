@@ -72,3 +72,26 @@ def update_file():
     except Exception as e:
             
             print(f"The following error occured: {e}")
+
+print("Here are the following actions that you can do: \n1. Create a file \n2. Delete a file \n3. Update a file \n4. Exit the program")
+
+while True:
+
+
+    choice = int(input("Enter in the number of the action you want to do: "))
+
+    if choice == 1:
+
+        create_file()
+
+    elif choice == 2:
+        
+        delete_file()
+
+    elif choice == 3:
+        
+        update_file()
+    
+    elif choice == 4:
+
+        break

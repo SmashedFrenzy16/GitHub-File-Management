@@ -18,11 +18,11 @@ def create_file():
 
         file = input("Enter in the file name and extension that you want to create: ")
 
-        message = input("Enter in commit message: ")
+        message = input("Enter in your commit message: ")
 
-        content = input("Enter file cotents: ")
+        content = input("Enter in the file contents: ")
 
-        branch = input("Enter the branch name you want to create this file in: ")
+        branch = input("Enter in the branch name you want to create this file in: ")
 
         final_repo.create_file(file, message, content, branch)
 
@@ -39,9 +39,9 @@ def delete_file():
 
         file_to_delete = input("Enter in the file name and extension of the file you want to delete: ")
 
-        message = input("Enter in commit message: ")
+        message = input("Enter in your commit message: ")
 
-        branch = input("Enter the branch name you want to delete this file in: ")
+        branch = input("Enter in the branch name you want to delete this file in: ")
 
         delete_info = final_repo.get_contents(file_to_delete)
 
@@ -61,9 +61,9 @@ def update_file():
 
         c = final_repo.get_contents(file_to_update)
 
-        message = input("Enter in commit message: ")
+        message = input("Enter in the commit message: ")
 
-        branch = input("Enter the branch name you want to update this file in: ")
+        branch = input("Enter in the branch name you want to update this file in: ")
 
         contents = input("Enter in the new contents of the file: ")
 

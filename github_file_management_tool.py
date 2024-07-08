@@ -23,6 +23,8 @@ def create_file():
         branch = input("Enter the branch name you want to create this file in: ")
 
         final_repo.create_file(file, message, content, branch)
+
+        print("File created successfully!")
     
     except Exception as e:
 
@@ -43,6 +45,8 @@ def delete_file():
 
         final_repo.delete_file(delete_info.path, message, delete_info.sha, branch=branch)
 
+        print("File deleted successfully!")
+
     except Exception as e:
 
         print(f"The following error occured: {e}")
@@ -59,7 +63,11 @@ def update_file():
 
         branch = input("Enter the branch name you want to update this file in: ")
 
-        final_repo.update_file(c.path, message, "test", c.sha, branch=branch)
+        contents = input("Enter in the new contents of the file: ")
+
+        final_repo.update_file(c.path, message, contents, c.sha, branch=branch)
+
+        print("File updated successfully!")
 
     except Exception as e:
             
